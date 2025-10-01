@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Unit.com - Free Unit Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <h1 class="header__title">
+                    <span class="header__logo">🔄</span>
+                    Change Unit.com
+                </h1>
+                <p class="header__subtitle">Free Online Unit Converter</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Category Selection View -->
+            <div id="categoryView" class="category-view">
+                <div class="intro">
+                    <h2>Select a Conversion Category</h2>
+                    <p>Choose from our comprehensive collection of unit converters</p>
+                </div>
+                
+                <div class="category-grid" id="categoryGrid">
+                    <!-- Categories will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Conversion Interface View -->
+            <div id="conversionView" class="conversion-view hidden">
+                <div class="conversion-header">
+                    <button class="btn btn--outline back-btn" id="backBtn">
+                        ← Back to Categories
+                    </button>
+                    <h2 id="conversionTitle">Unit Converter</h2>
+                </div>
+
+                <div class="conversion-form">
+                    <div class="conversion-row">
+                        <div class="conversion-input-group">
+                            <label class="form-label" for="fromUnit">From</label>
+                            <select class="form-control" id="fromUnit">
+                                <option value="">Select unit</option>
+                            </select>
+                        </div>
+                        
+                        <button class="btn btn--secondary swap-btn" id="swapBtn" title="Swap units">
+                            ⇄
+                        </button>
+                        
+                        <div class="conversion-input-group">
+                            <label class="form-label" for="toUnit">To</label>
+                            <select class="form-control" id="toUnit">
+                                <option value="">Select unit</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="conversion-values">
+                        <div class="value-input-group">
+                            <label class="form-label" for="inputValue">Enter value</label>
+                            <input 
+                                type="number" 
+                                class="form-control value-input" 
+                                id="inputValue" 
+                                placeholder="0"
+                                step="any"
+                            >
+                        </div>
+                        
+                        <div class="equals-sign">=</div>
+                        
+                        <div class="value-output-group">
+                            <label class="form-label">Result</label>
+                            <div class="form-control value-output" id="outputValue">0</div>
+                        </div>
+                    </div>
+
+                    <div class="conversion-actions">
+                        <button class="btn btn--outline" id="clearBtn">Clear</button>
+                    </div>
+                </div>
+
+                <div class="formula-info" id="formulaInfo">
+                    <!-- Formula information will be displayed here -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Change Unit.com - Free Unit Conversion Tool</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
